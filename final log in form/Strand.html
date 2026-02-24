@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RNHS - Strands</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    text-align:center;
+    overflow-x:hidden;
+    background: linear-gradient(-45deg,#38bdf8,#7dd3fc,#bae6fd,#e0f2fe);
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.4);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    animation:slideDown 1s ease;
+}
+
+@keyframes slideDown{
+    from{transform:translateY(-100px);opacity:0;}
+    to{transform:translateY(0);opacity:1;}
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+}
+
+.logo{
+    width:60px;
+    margin-right:10px;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#065f46;
+    font-weight:600;
+    position:relative;
+}
+
+
+nav ul li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#16a34a;
+    transition:.4s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+
+#hero{
+    padding:200px 20px;
+    color:white;
+    text-shadow:0 10px 30px rgba(0,0,0,.3);
+    animation:heroFade 2s ease;
+    background: url('/images (2).jpeg') no-repeat center center/cover;
+}
+
+@keyframes heroFade{
+    from{opacity:0;transform:scale(1.1);}
+    to{opacity:1;transform:scale(1);}
+}
+
+#hero h1{
+    font-size:3rem;
+}
+
+
+.content{
+    margin:60px auto;
+    width:85%;
+    padding:50px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(12px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1s ease;
+}
+
+.content.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+h2{
+    margin-bottom:20px;
+    color:#14532d;
+}
+
+
+.school-img{
+    width:80%;
+    max-width:800px;
+    margin:25px 0;
+    border-radius:15px;
+    transition:.5s;
+}
+
+
+.school-img:hover{
+    transform:scale(1.05);
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+
+.values h1{
+    margin:10px 0;
+    color:#166534;
+    transition:.3s;
+}
+
+.values h1:hover{
+    transform:translateY(-5px);
+    color:#22c55e;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    text-align:center;
+
+    background: linear-gradient(-45deg,#38bdf8,#7dd3fc,#bae6fd,#e0f2fe);
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.4);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+}
+
+
+.logo {
+    width:50px;
+    margin-right:10px;
+    animation: float 4s ease-in-out infinite;
+}
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+
+
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#0c4a6e;
+    font-weight:600;
+}
+
+
+#hero{
+    width:100%;
+    padding:200px 20px;
+    color:white;
+    text-shadow:0 10px 30px rgba(0,0,0,.4);
+    background:url('/pagcor building.jpg') no-repeat center/cover;
+}
+
+#hero h1{
+    font-size:3rem;
+}
+
+
+#strands{
+    margin:60px auto;
+    width:85%;
+    padding:50px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(12px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+
+
+.grid{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+
+.strand{
+    background:white;
+    padding:15px;
+    border-radius:18px;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.strand:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.strand img{
+    width:100%;
+    border-radius:12px;
+}
+
+.strand h1{
+    font-size:1.2rem;
+    margin:10px 0;
+    color:#0369a1;
+}
+
+.strand p{
+    font-size:.9rem;
+}
+
+
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo-container">
+<img src="images.png-removebg-preview.png" class="logo">
+ROSALES NATIONAL HIGH SCHOOL
+</div>
+
+ <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mission and vision.html">Mission & Vision</a></li>
+        <li><a href="Strand.html">Strand</a></li>
+        <li><a href="About RNHS.html">About RNHS</a></li>
+        <li><a href="Events.html">Events</a></li>
+        <li><a href="Facilities.html">Facilities</a></li>
+        <li><a href="History.html">History</a></li>
+    </ul>
+</nav>
+</header>
+
+<section id="hero">
+<h1>Our Academic Strands</h1>
+</section>
+
+    <section id="strands">
+        <h2>STRANDS WE OFFER</h2>
+        <h3>We are thrilled to introduce you to the exciting opportunities and unique educational pathway offered within our program. Our strand is specifically designed to provide students with a focused and specialized learning experience, tailored to their interests and future career goals.</h3>
+        <div class="grid">
+            <div class="strand"><img src="images6.png.png" alt="Strand 1"><h1>Science, Technology, Engineering, and Mathematics</h1><h3>The STEM (Science, Technology, Engineering, and Mathematics) strand in our Academic Track is tailored for students passionate about science and technology. This program prepares them for future careers in fields such as engineering, computer science, biology, and physics.</h3></div>
+            <div class="strand"><img src="images7.png" alt="Strand 2"><h1>Accountancy, Business & Management (ABM)</h1><h3>The ABM (Accounting and Business Management) strand in our Academic Track is tailored for students interested in the world of finance, business, and management. Ideal for those aspiring to pursue careers in accounting, business administration, or management, the ABM strand provides a solid foundation for success in the dynamic world of commerce.</h3></div>
+            <div class="strand"><img src="images8.png" alt="Strand 3"><h1>Humanities & Social Sciences (HUMSS)</h1><h3>The HUMSS (Humanities and Social Sciences) strand in our Academic Track is tailored for students who love literature, social studies, and the arts. This program fosters critical thinking through engaging coursework in history, psychology, and literature. Ideal for those passionate about journalism, education, or the arts.</h3></div>
+            <div class="strand"><img src="images9.png" alt="Strand 4"><h1>General Academic Strand</h1><h3>The GAS (General Academic Strand) strand in our Academic Track offers a flexible and well-rounded educational experience for students exploring diverse fields. It provides a comprehensive foundation for those who have not yet decided on a specific career path, offering a broad range of knowledge and skills applicable to various fields of study in higher education.</h3></div>
+            <div class="strand"><img src="images10.png" alt="Strand 5"><h1>Technical-Vocational-Livelihood (TVL)</h1><h3>The TVL Track in our academic program is designed for students with a practical and hands-on approach to learning. This track prepares students for various technical, vocational, and livelihood opportunities. Within the TVL Track, students can specialize in areas such as Home Economics, delving into practical life skills; ICT (Information and Communication Techn</h3>
+</div>
+</section>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+const appear = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+},{threshold:0.3});
+
+faders.forEach(fade=>{
+appear.observe(fade);
+});
+</script>
+
+</body>
+</html>

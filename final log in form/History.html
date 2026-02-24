@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RNHS - History</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    text-align:center;
+    overflow-x:hidden;
+    background: linear-gradient(-45deg,#38bdf8,#7dd3fc,#bae6fd,#e0f2fe);
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.4);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    animation:slideDown 1s ease;
+}
+
+@keyframes slideDown{
+    from{transform:translateY(-100px);opacity:0;}
+    to{transform:translateY(0);opacity:1;}
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+}
+
+.logo{
+    width:60px;
+    margin-right:10px;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#065f46;
+    font-weight:600;
+    position:relative;
+}
+
+
+nav ul li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#16a34a;
+    transition:.4s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+
+#hero{
+    padding:200px 20px;
+    color:white;
+    text-shadow:0 10px 30px rgba(0,0,0,.3);
+    animation:heroFade 2s ease;
+    background: url('/images (2).jpeg') no-repeat center center/cover;
+}
+
+@keyframes heroFade{
+    from{opacity:0;transform:scale(1.1);}
+    to{opacity:1;transform:scale(1);}
+}
+
+#hero h1{
+    font-size:3rem;
+}
+
+
+.content{
+    margin:60px auto;
+    width:85%;
+    padding:50px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(12px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1s ease;
+}
+
+.content.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+h2{
+    margin-bottom:20px;
+    color:#14532d;
+}
+
+
+.school-img{
+    width:80%;
+    max-width:800px;
+    margin:25px 0;
+    border-radius:15px;
+    transition:.5s;
+}
+
+
+.school-img:hover{
+    transform:scale(1.05);
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+
+.values h1{
+    margin:10px 0;
+    color:#166534;
+    transition:.3s;
+}
+
+.values h1:hover{
+    transform:translateY(-5px);
+    color:#22c55e;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    text-align:center;
+
+    background: linear-gradient(-45deg,#38bdf8,#7dd3fc,#bae6fd,#e0f2fe);
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    backdrop-filter: blur(10px);
+    background: skyblue
+    position:sticky;
+    top:0;
+    z-index:1000;
+    color:white;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+}
+
+.logo{
+    width:50px;
+    margin-right:10px;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+}
+
+
+#hero{
+    width:100%;
+    padding:200px 20px;
+    color:white;
+    text-shadow:0 10px 30px rgba(0,0,0,.4);
+    background:url('/school history hero.jpg') no-repeat center/cover;
+}
+
+#hero h1{
+    font-size:3rem;
+}
+
+
+#history{
+    margin:60px auto;
+    width:85%;
+    padding:50px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(12px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s ease;
+}
+
+#history.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+h2{
+    margin-bottom:20px;
+    color:#0369a1;
+}
+
+p{
+    font-size:1rem;
+    line-height:1.6;
+    text-align:justify;
+}
+
+
+.history-img{
+    width:80%;
+    max-width:700px;
+    margin:20px 0;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.history-img:hover{
+    transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo-container">
+<img src="images.png-removebg-preview.png" class="logo">
+ROSALES NATIONAL HIGH SCHOOL
+</div>
+
+<ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mission and vision.html">Mission & Vision</a></li>
+        <li><a href="Strand.html">Strand<br>
+<br></a></li>
+        <li><a href="About RNHS.html">About RNHS</a></li>
+        <li><a href="Events.html">Events</a></li>
+        <li><a href="Facilities.html">Facilities</a></li>
+        <li><a href="History.html">History</a></li>
+    </ul>
+</nav>
+</header>
+
+
+<section id="hero">
+<h1>Our History</h1>
+</section>
+
+
+<section id="history">
+<h2>Rosales National High School</h2>
+
+<img src="482325323_122154438896378960_7451802543916062330_n.jpg" alt="RNHS PICTURE" class="history-img">
+
+<p></p>
+
+<p></p>
+
+<img src="ad24d492-41ca-464f-9168-f32b6a44b771.jfif" alt="RNHS PICTURE" class="history-img">
+<br>
+<br>
+<br>
+<H3>Rosales National High School in Rosales, Pangasinan was originally established 
+    as a public secondary school to serve local students. On June 19, 1965, it was officially converted into a national high school 
+    through Republic Act No. 4325, placing it under the Department of Education. Since then, the school has expanded 
+    its programs and facilities and now offers both Junior and Senior High School education.</H3>
+
+<p></p>
+</section>
+<button>
+        <a href="login form ni leo.html" style="text-decoration:none;color:white;">
+            Log out.
+        </a>
+        </button>
+<script>
+
+const historySection = document.querySelector('#history');
+
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+},{threshold:0.3});
+
+observer.observe(historySection);
+</script>
+
+</body>
+</html>

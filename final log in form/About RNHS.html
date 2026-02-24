@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About RNHS</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    text-align:center;
+    overflow-x:hidden;
+
+
+    background: linear-gradient(-45deg,#38bdf8,#7dd3fc,#bae6fd,#e0f2fe);
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    backdrop-filter: blur(10px);
+    background:rgba(255,255,255,0.4);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+}
+
+.logo{
+    width:60px;
+    margin-right:10px;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#065f46;
+    font-weight:600;
+    position:relative;
+}
+
+nav ul li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#16a34a;
+    transition:.4s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+
+#hero{
+    width:100%;
+    padding:200px 20px;
+    color:white;
+    text-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+#hero h1{
+    font-size:3rem;
+}
+
+
+section{
+    margin:60px auto;
+    width:85%;
+    padding:50px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(12px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s ease;
+}
+
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+h2{
+    margin-bottom:20px;
+    color:#14532d;
+}
+
+p{
+    font-size:1rem;
+    line-height:1.6;
+    text-align:justify;
+}
+
+
+.school-img{
+    width:80%;
+    max-width:800px;
+    margin:25px 0;
+    border-radius:15px;
+    transition:.5s;
+}
+
+.school-img:hover{
+    transform:scale(1.05);
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+
+.values h1{
+    margin:10px 0;
+    color:#166534;
+    transition:.3s;
+}
+
+.values h1:hover{
+    transform:translateY(-5px);
+    color:#22c55e;
+}
+
+
+form{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+form label{
+    margin-top:10px;
+    font-weight:500;
+}
+
+form input, form textarea{
+    width:80%;
+    margin:10px 0;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:1rem;
+}
+
+form textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+form button{
+    padding:12px 25px;
+    background:linear-gradient(135deg,#0ea5e9,#38bdf8);
+    color:white;
+    font-weight:bold;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+section.contact{
+    text-align: center;
+    max-width: 800px;
+    margin: 60px auto;
+}
+
+section.contact p{
+    margin: 8px 0;
+}
+
+section.contact form{
+    align-items: flex-start; 
+}
+
+form button:hover{
+    transform:translateY(-6px) scale(1.05);
+    box-shadow:0 15px 25px rgba(14,165,233,.4);
+}
+
+
+.social-icons{
+    margin-top:30px;
+}
+
+.social-icons img{
+    width:40px;
+    margin:10px;
+    transition:.4s;
+}
+
+.social-icons img:hover{
+    transform:translateY(-8px) rotate(8deg) scale(1.2);
+}
+</style>
+</head>
+
+<body>
+
+
+<header>
+<nav>
+<div class="logo-container">
+<img src="images.png-removebg-preview.png" class="logo">
+ROSALES NATIONAL HIGH SCHOOL
+</div>
+
+ <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mission and vision.html">Mission & Vision</a></li>
+        <li><a href="Strand.html">Strand</a></li>
+        <li><a href="About RNHS.html">About RNHS</a></li>
+        <li><a href="Events.html">Events</a></li>
+        <li><a href="Facilities.html">Facilities</a></li>
+        <li><a href="History.html">History</a></li>
+    </ul>
+</nav>
+</header>
+
+
+<section id="hero" class="fade">
+<h1>About RNHS</h1>
+</section>
+
+</section>
+<h1>OUR ROSALES NATIONAL HIGH SCHOOL MAP</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<img src="Screenshot 2026-02-19 0952351.png" alt="OUR MAP">
+<br>
+<section class="fade">
+<h2>Contact Us</h2>
+  <div style="float: center;">
+<h3>Coloma St., Don Antonio Village</h3>
+<h3>Rosales, Pangasinan</h3>
+<h3>Region I, Philippines</h3>
+<h3>rosalesnhsshs@gmail.com</h3>
+<br>
+<br>
+
+<form action="send_message.php" method="POST">
+<label for="name">Your Name:</label>
+<input type="text" id="name" name="name" required>
+
+<label for="email">Your Email:</label>
+<input type="email" id="email" name="email" required>
+
+<label for="message">Your Message:</label>
+<textarea id="message" name="message" required></textarea>
+
+<button type="submit">Send Message</button>
+<div class="social-icons">
+<a href="https://facebook.com" target="_blank"><img src="images2.png" alt="Facebook"></a>
+<a href="https://twitter.com" target="_blank"><img src="images3.png" alt="Twitter"></a>
+<a href="https://m.me/" target="_blank"><img src="images4.png" alt="Message"></a>
+<a href="https://google.com" target="_blank"><img src="images5.png" alt="Google"></a>
+</div>
+
+
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+const appear = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+},{threshold:0.3});
+
+faders.forEach(fade=>{
+appear.observe(fade);
+});
+</script>
+
+</body>
+</html>

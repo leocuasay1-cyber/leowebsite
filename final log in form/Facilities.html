@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RNHS - Facilities</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    text-align:center;
+    overflow-x:hidden;
+    background: linear-gradient(-45deg,#38bdf8,#7dd3fc,#bae6fd,#e0f2fe);
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.4);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    animation:slideDown 1s ease;
+}
+
+@keyframes slideDown{
+    from{transform:translateY(-100px);opacity:0;}
+    to{transform:translateY(0);opacity:1;}
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+}
+
+.logo{
+    width:60px;
+    margin-right:10px;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#065f46;
+    font-weight:600;
+    position:relative;
+}
+
+
+nav ul li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#16a34a;
+    transition:.4s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+
+
+
+@keyframes heroFade{
+    from{opacity:0;transform:scale(1.1);}
+    to{opacity:1;transform:scale(1);}
+}
+
+#hero h1{
+    font-size:3rem;
+}
+
+
+.content{
+    margin:60px auto;
+    width:85%;
+    padding:50px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(12px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1s ease;
+}
+
+.content.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+h2{
+    margin-bottom:20px;
+    color:#14532d;
+}
+
+
+.school-img{
+    width:80%;
+    max-width:800px;
+    margin:25px 0;
+    border-radius:15px;
+    transition:.5s;
+}
+
+
+.school-img:hover{
+    transform:scale(1.05);
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+
+.values h1{
+    margin:10px 0;
+    color:#166534;
+    transition:.3s;
+}
+
+.values h1:hover{
+    transform:translateY(-5px);
+    color:#22c55e;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    text-align:center;
+
+    background: linear-gradient(-45deg,#38bdf8,#7dd3fc,#bae6fd,#e0f2fe);
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    backdrop-filter: blur(10px);
+    
+    position:sticky;
+    top:0;
+    z-index:1000;
+    color:white;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+}
+
+.logo{
+    width:50px;
+    margin-right:10px;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+}
+
+
+#hero{
+    width:100%;
+    padding:200px 20px;
+    color:white;
+    text-shadow:0 10px 30px rgba(0,0,0,.4);
+    background:url('/school building.jpg') no-repeat center/cover;
+}
+
+#hero h1{
+    font-size:3rem;
+}
+
+
+#facilities{
+    margin:60px auto;
+    width:85%;
+    padding:50px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(12px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.facility{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.4s;
+    cursor:pointer;
+}
+
+.facility:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.facility img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.facility h3{
+    font-size:1.2rem;
+    color:#0369a1;
+    margin:10px 0;
+}
+
+.facility p{
+    font-size:.9rem;
+    padding:0 10px 10px 10px;
+}
+
+
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo-container">
+<img src="images.png-removebg-preview.png" class="logo">
+ROSALES NATIONAL HIGH SCHOOL
+</div>
+
+ <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mission and vision.html">Mission & Vision</a></li>
+        <li><a href="Strand.html">Strand</a></li>
+        <li><a href="About RNHS.html">About RNHS</a></li>
+        <li><a href="Events.html">Events</a></li>
+        <li><a href="Facilities.html">Facilities</a></li>
+        <li><a href="History.html">History</a></li>
+    </ul>
+</nav>
+</header>
+
+
+<section id="hero">
+<h1>Our School Facilities</h1>
+</section>
+
+
+<section id="facilities" class="fade">
+<h2>Facilities</h2>
+<h3>Explore the facilities that support learning and growth at Rosales National High School.</h3>
+
+<div class="grid">
+    <div class="facility">
+        <img src="15a11311-b877-466e-a8e0-cb808ee07bf1.jfif" alt="Library">
+        <h3>Library</h3>
+        <h4>A well-stocked library for research, reading, and study.</h4>
+    </div>
+
+    <div class="facility">
+        <img src="images11.png.jfif" alt="Computer Lab">
+        <h3>Computer Lab</h3>
+        <h4>Modern computers for students to enhance ICT skills.</h4>
+    </div>
+
+    <div class="facility">
+        <img src="dc15ea44-8e5c-4bde-b901-9b3d04e07455.jfif" alt="Dressmaking Lab">
+        <h3>Dressmaking Lab</h3>
+        <h4>A creative space where students learn sewing, clothing design, and basic fashion skills for hands-on training.</h4>
+    </div>
+
+    <div class="facility">
+        <img src="ad24d492-41ca-464f-9168-f32b6a44b771.jfif" alt="Gymnasium">
+        <h3>Gymnasium</h3>
+        <h4>Indoor space for sports, assemblies, and events.</h4>
+    </div>
+
+    
+</div>
+</section>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+const appear = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+    if(entry.isIntersecting){
+        entry.target.classList.add('show');
+    }
+});
+},{threshold:0.3});
+
+faders.forEach(fade=>{
+appear.observe(fade);
+});
+</script>
+
+</body>
+</html>
